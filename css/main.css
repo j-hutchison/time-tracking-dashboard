@@ -27,12 +27,17 @@ body {
 }
 
 main {
+	max-width: 111rem;
 }
 
 h1 {
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 1.2;
 }
 
 h2 {
+	font-size: 1.8rem;
 }
 
 ul {
@@ -57,16 +62,23 @@ ul {
 	display: flex;
 	flex-direction: column;
 	gap: 4.3rem;
-	padding: 3.7rem 3.2rem 8rem;
+	padding: 3.7rem 8.4rem 8rem 3.2rem;
 	background-color: #5747ea;
 	border-radius: 15px;
 }
 .img-avatar {
 	height: 7.8rem;
 	width: 7.8rem;
+	border-radius: 50%;
+	box-shadow: 0 0 0 3.5px #fff;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .heading-primary--prefix {
+	display: block;
 	color: #bbc0ff;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.1;
 }
 .duration-filter ul {
 	display: flex;
@@ -75,27 +87,41 @@ ul {
 	gap: 2.1rem;
 	padding: 2.6rem 3.2rem;
 }
-.dur-filter--option {
+.filter-link:link,
+.filter-link:visited {
 	color: #7078c9;
 	font-size: 1.8rem;
 	font-weight: 400;
 	line-height: 1.2;
+	text-decoration: none;
 }
-.dur-filter--active {
+
+a.filter-link--active:link,
+a.filter-link--active:visited,
+.filter-link:active,
+.filter-link:hover {
 	color: #fff;
 }
+
 .tile {
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
+	border: none;
 
 	position: relative;
 	border-radius: 15px;
 	background-color: #1c204b;
 }
+
+.color-banner {
+	height: 40%;
+}
+
 .tile-icon {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: -0.8rem;
+	right: 1.7rem;
 	height: 7.6rem;
 	width: 7.6rem;
 }
@@ -105,9 +131,27 @@ ul {
 	border-radius: 15px;
 	padding: 2.8rem;
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	top: 4.5rem;
 }
+
+.tile-content:hover {
+	background-color: #33397a;
+}
+
+.tile-header {
+	display: flex;
+	justify-content: space-between;
+
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.icon-elips:hover,
+.icon-elips:active {
+	filter: sepia(100%) grayscale(100%) brightness(100);
+}
+
 .bg-orange {
 	background-color: #ff8b64;
 }
@@ -128,12 +172,24 @@ ul {
 }
 
 .task-duration {
+	font-size: 5.6rem;
+	margin: 2.4rem 0 0.8rem;
 }
 .duration-numeric {
+	font-weight: 300;
 }
 .duration-units {
+	font-weight: 300;
 }
 .weak {
+	color: #bbc0ff;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.hidden {
+	display: none;
 }
 
 .attribution {
