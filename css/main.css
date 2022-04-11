@@ -103,7 +103,8 @@ a.filter-link--active:visited,
 	color: #fff;
 }
 
-.tile {
+.tile,
+.tile-heading {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
@@ -115,7 +116,7 @@ a.filter-link--active:visited,
 }
 
 .color-banner {
-	height: 40%;
+	height: 10rem;
 }
 
 .tile-icon {
@@ -198,4 +199,88 @@ a.filter-link--active:visited,
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 72em) {
+	main {
+		max-width: 32.7rem;
+	}
+
+	.container {
+		padding-top: 8.1rem;
+		padding-bottom: 8.1rem;
+		height: unset;
+	}
+
+	.grid {
+		gap: 0rem;
+	}
+
+	.grid-col--4 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 20fr 16fr 16fr 16fr 16fr 16fr 16fr;
+	}
+
+	.rows--2 {
+		grid-row: 1 / 1;
+	}
+	.personal-details {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		gap: 2rem;
+		padding: 3.5rem 3.9rem 3.4rem 3.2rem;
+	}
+	.img-avatar {
+		height: 6.4rem;
+		width: 6.4rem;
+	}
+
+	h1 {
+		font-size: 2.4rem;
+		font-weight: 300;
+		line-height: 2.8rem;
+	}
+
+	.duration-filter ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.tile {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		border: none;
+
+		position: relative;
+		border-radius: 15px;
+		background-color: unset;
+	}
+
+	.tile-heading {
+		margin-bottom: 2.4rem;
+	}
+
+	.tile-content {
+		height: 12.2rem;
+	}
+
+	.task-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0.6rem 0 0.8rem;
+	}
+
+	.task-duration {
+		font-size: 3.2rem;
+		font-weight: 300;
+		margin: unset;
+	}
+	.duration-numeric {
+		font-weight: 300;
+	}
 }
